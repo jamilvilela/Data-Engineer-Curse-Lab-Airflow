@@ -1,0 +1,15 @@
+# Lab 5 - Preparando o Container Docker Para o Banco de Dados do DW
+
+
+# Execute o comando abaixo no terminal ou prompt de comando para baixar a imagem do Postgres (opcional)
+
+docker pull postgres
+
+
+# Execute o comando abaixo para inicializar o container
+
+docker run --name dbdsa -p 5433:5432 -e POSTGRES_USER=dsalabdw -e POSTGRES_PASSWORD=dsalabdw123 -e POSTGRES_DB=dwdb -d postgres
+
+
+# Acesse o Postgres pelo pgAdmin e crie um schema chamado dsalabdw
+
